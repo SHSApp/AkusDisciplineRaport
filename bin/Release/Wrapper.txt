@@ -1,0 +1,39 @@
+  LOCAL FileName, gnFile, Parameters
+
+  DECLARE INTEGER ShellExecute ;
+	    IN SHELL32.DLL ;
+	    INTEGER nWinHandle,;
+	    STRING cOperation,;
+	    STRING cFileName,;
+	    STRING cParameters,;
+	    STRING cDirectory,;
+	    INTEGER nShowWindow
+
+  FileName = SUBSTR(SYS(2015),7,5)+"SHSAPP.txt"
+  Parameters = ""
+
+  select distinct card.itemperson from card where ((not empty(card.itemperson))) ;
+  and _ins $ card.ins into cursor total_cursor
+
+  if recc('total_cursor') > 0
+    select total_cursor
+    scan
+      Parameters = Parameters + total_cursor.itemperson 
+    endscan
+  else
+    for my_formCount=1 to _screen.FormCount
+      if _screen.Forms(my_formCount).name = 'kart_lf'
+        SELECT (_screen.Forms(my_formCount).my_MainCursor)
+          Parameters = Parameters + itemperson
+      endif
+    next
+  endif
+  if file((_Form + FileName))
+    gnFile = fopen((_Form + FileName), 12)
+  else
+    gnFile = fcreate((_Form + FileName))
+  endif
+  Parameters = STRCONV(Parameters,9) 
+  fwrite(gnFile, Parameters)
+  fclose(gnFile)
+  ShellExecute(0, "open", (_Form + "SHSApp.exe"), (FileName), (_Form), 1)

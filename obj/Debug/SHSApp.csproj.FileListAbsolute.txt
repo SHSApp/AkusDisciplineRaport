@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\bin\Debug\SHSApp.exe.config
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\bin\Debug\SHSApp.exe
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\bin\Debug\SHSApp.pdb
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\obj\Debug\SHSApp.Form1.resources
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\obj\Debug\SHSApp.Properties.Resources.resources
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\obj\Debug\SHSApp.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\obj\Debug\SHSApp.exe
+C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\obj\Debug\SHSApp.pdb

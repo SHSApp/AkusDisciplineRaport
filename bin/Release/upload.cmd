@@ -1,0 +1,1 @@
+copy /Y C:\Users\User\Desktop\PROJECTS\SHSApp\SHSApp\bin\Release\SHSApp.exe C:\IK\Database\Form\SHSApp.exe
